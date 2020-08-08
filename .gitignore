@@ -1,0 +1,7 @@
+# Directories:
+.vs/
+Bin/
+Bin-Int/
+
+# Files types:
+*.user
