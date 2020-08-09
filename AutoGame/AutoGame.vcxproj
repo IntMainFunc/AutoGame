@@ -95,7 +95,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Src\AgCore.h" />
     <ClInclude Include="Src\AgPch.h" />
+    <ClInclude Include="Src\Engine\Application\App.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\AgPch.cpp">
