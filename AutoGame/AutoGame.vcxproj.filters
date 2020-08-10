@@ -1,36 +1,55 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{DBC7D3B0-C769-FE86-B024-12DB9C6585D7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Engine\Application">
+      <UniqueIdentifier>{1EA4C00C-0A88-8162-73E8-7BB55FEB6BE4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Engine\Events">
+      <UniqueIdentifier>{5FAFB439-CB6F-3070-94AA-79ED002A754C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{6917EFFE-D5F6-6D9A-DE0E-F9704A6DD4FB}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Src\AgPch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="Src\AgCore.h" />
+    <ClInclude Include="Src\AgPch.h" />
+    <ClInclude Include="Src\Engine\Application\AgApp.h">
+      <Filter>Engine\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Engine\Application\AgWindow.h">
+      <Filter>Engine\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Engine\Events\AgEvents.h">
+      <Filter>Engine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Engine\Events\CoreEvents.h">
+      <Filter>Engine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Engine\Events\KeyboardEvents.h">
+      <Filter>Engine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Engine\Events\MouseEvents.h">
+      <Filter>Engine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Engine\Events\WindowEvents.h">
+      <Filter>Engine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Include\AgGameEngine.h">
+      <Filter>Include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Src\AgPch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Engine\Application\App.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\AgCore.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClCompile Include="Src\AgPch.cpp" />
+    <ClCompile Include="Src\Engine\Application\AgApp.cpp">
+      <Filter>Engine\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Engine\Application\AgWindow.cpp">
+      <Filter>Engine\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\EntryPoint.cpp" />
   </ItemGroup>
 </Project>

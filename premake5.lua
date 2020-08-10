@@ -12,7 +12,7 @@ workspace "AutoGame"
 		kind "ConsoleApp"
 		language "C++"
 		cppdialect "c++17"
-		staticruntime "On"
+		staticruntime "Off"
 
 		targetdir "Bin/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}/%{prj.name}"
 		objdir "Bin-Int/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}/%{prj.name}"
@@ -26,7 +26,20 @@ workspace "AutoGame"
 		}
 
 		includedirs {
-			"%{prj.name}/Src"
+			"%{prj.name}/Src",
+			"Vendor/Glfw/include",
+			"Vendor/Glad/include"
+		}
+
+		libdirs {
+			"Vendor/Glfw/lib-vc2019",
+			"Vendor/Glad"
+		}
+
+		links {
+			"glfw3.lib",
+			"glad.lib",
+			"opengl32.lib"
 		}
 
 		filter "system:windows"

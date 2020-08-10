@@ -15,6 +15,9 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
+
 #include "AgCore.h"
 
 #ifdef AG_PLAT_WINDOWS

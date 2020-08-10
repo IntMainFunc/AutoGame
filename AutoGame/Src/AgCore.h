@@ -31,8 +31,8 @@ namespace Ag {
 
 	#define AG_ASSERT(x, ...)\
 	if (x)\
-	std::cout << "[Log]: ";\
-	Ag::Logger::Log(__VA_ARGS__)
+	{std::cout << "[Log]: ";\
+	Ag::Logger::Log(__VA_ARGS__);}
 
 #else
 	#define AG_LOG(...)
