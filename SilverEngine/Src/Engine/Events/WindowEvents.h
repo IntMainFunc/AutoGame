@@ -24,7 +24,7 @@ namespace Ag {
 		std::string GetDebug() const override
 		{
 			std::stringstream ss;
-			ss << "WindowResizeEvent: x:" << m_Width << " y:" << m_Height;
+			ss << "event(WindowResizeEvent): x:" << m_Width << " y:" << m_Height;
 			return ss.str();
 		}
 
@@ -39,7 +39,7 @@ namespace Ag {
 		std::string GetDebug() const override
 		{
 			std::stringstream ss;
-			ss << "WindowCloseEvent: NULL";
+			ss << "event(WindowCloseEvent): NULL";
 			return ss.str();
 		}
 
@@ -54,7 +54,7 @@ namespace Ag {
 		std::string GetDebug() const override
 		{
 			std::stringstream ss;
-			ss << "WindowFocusEvent: NULL";
+			ss << "event(WindowFocusEvent): NULL";
 			return ss.str();
 		}
 
@@ -69,7 +69,7 @@ namespace Ag {
 		std::string GetDebug() const override
 		{
 			std::stringstream ss;
-			ss << "WindowLostFocusEvent: NULL";
+			ss << "event(WindowLostFocusEvent): NULL";
 			return ss.str();
 		}
 

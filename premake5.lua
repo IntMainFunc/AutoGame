@@ -1,14 +1,14 @@
 
 -- Workspace: AutoGame
 -- -------------------
-workspace "AutoGame"
+workspace "SilverEngine"
 	architecture "x86_64"
 	configurations { "Debug", "Release" }
 
 -- Project: AutoGame
 -- -----------------
-	project "AutoGame"
-		location "AutoGame"
+	project "SilverEngine"
+		location "SilverEngine"
 		kind "ConsoleApp"
 		language "C++"
 		cppdialect "c++17"

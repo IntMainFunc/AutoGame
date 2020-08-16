@@ -23,7 +23,7 @@ namespace Ag {
 		virtual std::string GetDebug() const override
 		{
 			std::stringstream ss;
-			ss << "KeyEvent: " << m_KeyCode;
+			ss << "event(KeyEvent): " << m_KeyCode;
 			return ss.str();
 		}
 
@@ -47,9 +47,9 @@ namespace Ag {
 		{
 			std::stringstream ss;
 			if (!m_RepeatCount)
-				ss << "KeyPressEvent(Press): " << m_KeyCode;
+				ss << "event(KeyPressEvent(Press)): " << m_KeyCode;
 			else
-				ss << "KeyPressEvent(Repeat): " << m_KeyCode;
+				ss << "event(KeyPressEvent(Repeat)): " << m_KeyCode;
 			return ss.str();
 		}
 
@@ -69,7 +69,7 @@ namespace Ag {
 		std::string GetDebug() const override
 		{
 			std::stringstream ss;
-			ss << "KeyReleaseEvent: " << m_KeyCode;
+			ss << "event(KeyReleaseEvent): " << m_KeyCode;
 			return ss.str();
 		}
 

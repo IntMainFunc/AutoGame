@@ -11,10 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{38BE5FBD-248B-BAC8-4DA4-A87039D0EF56}</ProjectGuid>
+    <ProjectGuid>{D080BE76-BCE3-4D1B-6569-86D151AB199E}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>AutoGame</RootNamespace>
+    <RootNamespace>SilverEngine</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -42,16 +42,16 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\Bin\Debug-windows-x86_64\AutoGame\</OutDir>
-    <IntDir>..\Bin-Int\Debug-windows-x86_64\AutoGame\</IntDir>
-    <TargetName>AutoGame</TargetName>
+    <OutDir>..\Bin\Debug-windows-x86_64\SilverEngine\</OutDir>
+    <IntDir>..\Bin-Int\Debug-windows-x86_64\SilverEngine\</IntDir>
+    <TargetName>SilverEngine</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\Bin\Release-windows-x86_64\AutoGame\</OutDir>
-    <IntDir>..\Bin-Int\Release-windows-x86_64\AutoGame\</IntDir>
-    <TargetName>AutoGame</TargetName>
+    <OutDir>..\Bin\Release-windows-x86_64\SilverEngine\</OutDir>
+    <IntDir>..\Bin-Int\Release-windows-x86_64\SilverEngine\</IntDir>
+    <TargetName>SilverEngine</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

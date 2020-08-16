@@ -24,7 +24,7 @@ namespace Ag {
 		virtual std::string GetDebug() const override
 		{
 			std::stringstream ss;
-			ss << "MouseButtonEvent: " << m_Button;
+			ss << "event(MouseButtonEvent): " << m_Button;
 			return ss.str();
 		}
 
@@ -44,7 +44,7 @@ namespace Ag {
 		std::string GetDebug() const override
 		{
 			std::stringstream ss;
-			ss << "MousePressEvent: " << m_Button;
+			ss << "event(MousePressEvent): " << m_Button;
 			return ss.str();
 		}
 
@@ -64,7 +64,7 @@ namespace Ag {
 		std::string GetDebug() const override
 		{
 			std::stringstream ss;
-			ss << "MouseReleaseEvent: " << m_Button;
+			ss << "event(MouseReleaseEvent): " << m_Button;
 			return ss.str();
 		}
 
@@ -90,7 +90,7 @@ namespace Ag {
 		std::string GetDebug() const override
 		{
 			std::stringstream ss;
-			ss << "MouseReleaseEvent: x:" << m_PositionX << " y:" << m_PositionY;
+			ss << "event(MouseReleaseEvent): x:" << m_PositionX << " y:" << m_PositionY;
 			return ss.str();
 		}
 
@@ -116,7 +116,7 @@ namespace Ag {
 		std::string GetDebug() const override
 		{
 			std::stringstream ss;
-			ss << "MouseScrollEvent: x:" << m_OffsetX << " y:" << m_OffsetY;
+			ss << "event(MouseScrollEvent): x:" << m_OffsetX << " y:" << m_OffsetY;
 			return ss.str();
 		}
 
