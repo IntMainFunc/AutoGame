@@ -1,55 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Engine">
-      <UniqueIdentifier>{DBC7D3B0-C769-FE86-B024-12DB9C6585D7}</UniqueIdentifier>
+    <Filter Include="Src">
+      <UniqueIdentifier>{0D23880B-792C-887C-02A8-9E7C6EB0937C}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Application">
-      <UniqueIdentifier>{1EA4C00C-0A88-8162-73E8-7BB55FEB6BE4}</UniqueIdentifier>
+    <Filter Include="Src\Engine">
+      <UniqueIdentifier>{F27CE08C-DE34-22DA-473C-FB353313BDCA}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Events">
-      <UniqueIdentifier>{5FAFB439-CB6F-3070-94AA-79ED002A754C}</UniqueIdentifier>
+    <Filter Include="Src\Engine\Application">
+      <UniqueIdentifier>{B5B30EAE-A1AD-3700-8A1A-CE1076B39D6C}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Include">
-      <UniqueIdentifier>{6917EFFE-D5F6-6D9A-DE0E-F9704A6DD4FB}</UniqueIdentifier>
+    <Filter Include="Src\Engine\Events">
+      <UniqueIdentifier>{96E4AD55-02FB-ABEB-4B72-370DB7C77C73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor">
+      <UniqueIdentifier>{935FDCD7-7F01-07AE-68BC-1A0254FD8DFE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\Glad">
+      <UniqueIdentifier>{5A5AD115-C60F-4A0B-4F04-44E2BBB8400F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\Glad\include">
+      <UniqueIdentifier>{CD3BD804-399D-B512-C20A-FCC42E6BECD1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\Glad\include\KHR">
+      <UniqueIdentifier>{C16816EB-2DA0-5E82-36AA-C2A5A260857B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\Glad\include\glad">
+      <UniqueIdentifier>{F476F34D-E09B-42CE-09E7-275EF56A41EC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\Glfw">
+      <UniqueIdentifier>{125BD115-7E10-4A0B-0705-44E273B9400F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\Glfw\include">
+      <UniqueIdentifier>{857449BE-F1D5-26CC-7A43-6D7EE6A35D8B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\Glfw\include\GLFW">
+      <UniqueIdentifier>{E4CA0AE4-D0EF-5964-F93A-3FF4E5BE5882}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Src\AgCore.h" />
-    <ClInclude Include="Src\AgPch.h" />
-    <ClInclude Include="Src\Engine\Application\AgApp.h">
-      <Filter>Engine\Application</Filter>
+    <ClInclude Include="Src\AgCore.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\AgPch.h">
+      <Filter>Src</Filter>
     </ClInclude>
     <ClInclude Include="Src\Engine\Application\AgWindow.h">
-      <Filter>Engine\Application</Filter>
+      <Filter>Src\Engine\Application</Filter>
     </ClInclude>
     <ClInclude Include="Src\Engine\Events\AgEvents.h">
-      <Filter>Engine\Events</Filter>
+      <Filter>Src\Engine\Events</Filter>
     </ClInclude>
     <ClInclude Include="Src\Engine\Events\CoreEvents.h">
-      <Filter>Engine\Events</Filter>
+      <Filter>Src\Engine\Events</Filter>
     </ClInclude>
     <ClInclude Include="Src\Engine\Events\KeyboardEvents.h">
-      <Filter>Engine\Events</Filter>
+      <Filter>Src\Engine\Events</Filter>
     </ClInclude>
     <ClInclude Include="Src\Engine\Events\MouseEvents.h">
-      <Filter>Engine\Events</Filter>
+      <Filter>Src\Engine\Events</Filter>
     </ClInclude>
     <ClInclude Include="Src\Engine\Events\WindowEvents.h">
-      <Filter>Engine\Events</Filter>
+      <Filter>Src\Engine\Events</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Include\AgGameEngine.h">
-      <Filter>Include</Filter>
+    <ClInclude Include="Src\Silver.h">
+      <Filter>Src</Filter>
     </ClInclude>
+    <ClInclude Include="Vendor\Glad\include\KHR\khrplatform.h">
+      <Filter>Vendor\Glad\include\KHR</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\Glad\include\glad\glad.h">
+      <Filter>Vendor\Glad\include\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\Glfw\include\GLFW\glfw3.h">
+      <Filter>Vendor\Glfw\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\Glfw\include\GLFW\glfw3native.h">
+      <Filter>Vendor\Glfw\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Engine\Application\AgApp.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Src\AgPch.cpp" />
-    <ClCompile Include="Src\Engine\Application\AgApp.cpp">
-      <Filter>Engine\Application</Filter>
+    <ClCompile Include="Src\AgPch.cpp">
+      <Filter>Src</Filter>
     </ClCompile>
     <ClCompile Include="Src\Engine\Application\AgWindow.cpp">
-      <Filter>Engine\Application</Filter>
+      <Filter>Src\Engine\Application</Filter>
     </ClCompile>
-    <ClCompile Include="Src\EntryPoint.cpp" />
+    <ClCompile Include="Src\Engine\Application\AgApp.cpp" />
   </ItemGroup>
 </Project>

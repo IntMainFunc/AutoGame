@@ -4,7 +4,7 @@
 
 namespace Ag {
 
-	class MouseButtonEvent : public Event
+	class AG_API MouseButtonEvent : public Event
 	{
 	protected:
 		unsigned int m_Button;
@@ -30,7 +30,7 @@ namespace Ag {
 
 	};
 
-	class MousePressEvent : public MouseButtonEvent
+	class AG_API MousePressEvent : public MouseButtonEvent
 	{
 	public:
 		MousePressEvent(unsigned int button)
@@ -50,7 +50,7 @@ namespace Ag {
 
 	};
 
-	class MouseReleaseEvent : public MouseButtonEvent
+	class AG_API MouseReleaseEvent : public MouseButtonEvent
 	{
 	public:
 		MouseReleaseEvent(unsigned int button)
@@ -70,7 +70,7 @@ namespace Ag {
 
 	};
 
-	class MouseMoveEvent : public Event
+	class AG_API MouseMoveEvent : public Event
 	{
 	private:
 		float m_PositionX, m_PositionY;
@@ -96,7 +96,7 @@ namespace Ag {
 
 	};
 
-	class MouseScrollEvent : public Event
+	class AG_API MouseScrollEvent : public Event
 	{
 	private:
 		float m_OffsetX, m_OffsetY;

@@ -13,7 +13,7 @@ namespace Ag{
 	};
 
 
-	class Event
+	class AG_API Event
 	{
 	private:
 		friend class EventDispatcher;
@@ -32,7 +32,7 @@ namespace Ag{
 
 	};
 
-	class EventDispatcher
+	class AG_API EventDispatcher
 	{
 	private:
 		Event& m_Event;

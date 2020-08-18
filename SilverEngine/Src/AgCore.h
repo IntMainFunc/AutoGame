@@ -1,9 +1,23 @@
 #pragma once
 #include <iostream>
 
+#ifdef AG_PLAT_WINDOWS
+	#ifdef AG_BUILD_DLL
+		#define AG_API __declspec(dllexport)
+
+	#else
+		#define AG_API __declspec(dllimport)
+
+	#endif	// AG_BUILD_DLL
+
+#else 
+	#define AG_API
+
+#endif	// AG_PLAT_WINDOWS
+
 namespace Ag {
 
-	class Logger
+	class AG_API Logger
 	{
 	public:
 

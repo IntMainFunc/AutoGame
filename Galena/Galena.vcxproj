@@ -11,21 +11,21 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D080BE76-BCE3-4D1B-6569-86D151AB199E}</ProjectGuid>
+    <ProjectGuid>{6D8795B4-5929-C08A-42E4-D3DE2E2547DB}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>SilverEngine</RootNamespace>
+    <RootNamespace>Galena</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
@@ -42,45 +42,40 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\Bin\Debug-windows-x86_64\SilverEngine\</OutDir>
-    <IntDir>..\Bin-Int\Debug-windows-x86_64\SilverEngine\</IntDir>
-    <TargetName>SilverEngine</TargetName>
-    <TargetExt>.dll</TargetExt>
+    <OutDir>..\Bin\Debug-windows-x86_64\Galena\</OutDir>
+    <IntDir>..\Bin-Int\Debug-windows-x86_64\Galena\</IntDir>
+    <TargetName>Galena</TargetName>
+    <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\Bin\Release-windows-x86_64\SilverEngine\</OutDir>
-    <IntDir>..\Bin-Int\Release-windows-x86_64\SilverEngine\</IntDir>
-    <TargetName>SilverEngine</TargetName>
-    <TargetExt>.dll</TargetExt>
+    <OutDir>..\Bin\Release-windows-x86_64\Galena\</OutDir>
+    <IntDir>..\Bin-Int\Release-windows-x86_64\Galena\</IntDir>
+    <TargetName>Galena</TargetName>
+    <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>AgPch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>AG_PLAT_WINDOWS;AG_BUILD_DLL;AG_BUILD_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Src;Vendor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>AG_PLAT_WINDOWS;AG_BUILD_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Src;..\SilverEngine\Src;..\SilverEngine\Vendor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3.lib;glad.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>Vendor\Glfw\lib-vc2019;Vendor\Glad;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ImportLibrary>..\Bin\Debug-windows-x86_64\SilverEngine\SilverEngine.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>AgPch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>AG_PLAT_WINDOWS;AG_BUILD_DLL;AG_BUILD_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Src;Vendor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>AG_PLAT_WINDOWS;AG_BUILD_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Src;..\SilverEngine\Src;..\SilverEngine\Vendor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>None</DebugInformationFormat>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -91,37 +86,19 @@
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>glfw3.lib;glad.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>Vendor\Glfw\lib-vc2019;Vendor\Glad;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ImportLibrary>..\Bin\Release-windows-x86_64\SilverEngine\SilverEngine.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Src\AgCore.h" />
-    <ClInclude Include="Src\AgPch.h" />
-    <ClInclude Include="Src\Engine\Application\AgApp.h" />
-    <ClInclude Include="Src\Engine\Application\AgWindow.h" />
-    <ClInclude Include="Src\Engine\Events\AgEvents.h" />
-    <ClInclude Include="Src\Engine\Events\CoreEvents.h" />
-    <ClInclude Include="Src\Engine\Events\KeyboardEvents.h" />
-    <ClInclude Include="Src\Engine\Events\MouseEvents.h" />
-    <ClInclude Include="Src\Engine\Events\WindowEvents.h" />
-    <ClInclude Include="Src\Silver.h" />
-    <ClInclude Include="Vendor\Glad\include\KHR\khrplatform.h" />
-    <ClInclude Include="Vendor\Glad\include\glad\glad.h" />
-    <ClInclude Include="Vendor\Glfw\include\GLFW\glfw3.h" />
-    <ClInclude Include="Vendor\Glfw\include\GLFW\glfw3native.h" />
+    <ClCompile Include="Src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Src\AgPch.cpp">
-      <PrecompiledHeader>Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="Src\Engine\Application\AgApp.cpp" />
-    <ClCompile Include="Src\Engine\Application\AgWindow.cpp" />
+    <ProjectReference Include="..\SilverEngine\SilverEngine.vcxproj">
+      <Project>{D080BE76-BCE3-4D1B-6569-86D151AB199E}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

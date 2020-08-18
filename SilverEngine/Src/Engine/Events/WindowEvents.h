@@ -4,7 +4,7 @@
 
 namespace Ag {
 
-	class WindowResizeEvent : public Event
+	class AG_API WindowResizeEvent : public Event
 	{
 	private:
 		unsigned int m_Width, m_Height;
@@ -30,7 +30,7 @@ namespace Ag {
 
 	};
 
-	class WindowCloseEvent : public Event
+	class AG_API WindowCloseEvent : public Event
 	{
 	public:
 		static EventType GetStaticEventType() { return EventType::WindowClose; }
@@ -45,7 +45,7 @@ namespace Ag {
 
 	};
 
-	class WindowFocusEvent : public Event
+	class AG_API WindowFocusEvent : public Event
 	{
 	public:
 		static EventType GetStaticEventType() { return EventType::WindowFocus; }
@@ -60,7 +60,7 @@ namespace Ag {
 
 	};
 
-	class WindowLostFocusEvent : public Event
+	class AG_API WindowLostFocusEvent : public Event
 	{
 	public:
 		static EventType GetStaticEventType() { return EventType::WindowLostFocus; }

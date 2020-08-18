@@ -1,26 +1,19 @@
 #pragma once
 
 #include "AgPch.h"
-#include "Engine/Events/AgEvents.h" 
-#include "AgWindow.h"
 
 namespace Ag {
 
-	class App
+	class AG_API App
 	{
 	private:
-		bool m_IsRunning;
-		Window* m_Window;
-
-		bool CloseApp(WindowCloseEvent event);
 
 	public:
-		App(Window* window = new Window());
-		~App();
+		App();
+		virtual ~App();
 
-		void Run();
-		void OnEvent(Event& event);
+		static void Terminate();
+		static void Init();
 
 	};
-
 }

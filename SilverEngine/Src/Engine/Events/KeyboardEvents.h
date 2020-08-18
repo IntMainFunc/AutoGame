@@ -4,7 +4,7 @@
 
 namespace Ag {
 
-	class KeyEvent : public Event
+	class AG_API KeyEvent : public Event
 	{
 	protected:
 		unsigned int m_KeyCode;
@@ -29,7 +29,7 @@ namespace Ag {
 
 	};
 
-	class KeyPressEvent : public KeyEvent
+	class AG_API KeyPressEvent : public KeyEvent
 	{
 	private:
 		unsigned int m_RepeatCount;
@@ -55,7 +55,7 @@ namespace Ag {
 
 	};
 
-	class KeyReleaseEvent : public KeyEvent
+	class AG_API KeyReleaseEvent : public KeyEvent
 	{
 	public:
 		KeyReleaseEvent(unsigned int keyCode)

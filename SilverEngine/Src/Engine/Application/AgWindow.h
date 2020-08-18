@@ -5,7 +5,7 @@
 
 namespace Ag {
 
-	class Window
+	class AG_API Window
 	{
 	private:
 		using EventCallbackFunc = std::function<void(Event&)>;
